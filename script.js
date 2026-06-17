@@ -41,26 +41,51 @@ surpriseBtn.addEventListener('click', () => {
 
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 function playClickSound() {
-  // short, crunchy typing click using noise + bandpass
+  // crisper typing click: short sine + filtered noise burst
   try {
     if (audioCtx.state === 'suspended') audioCtx.resume();
-    const bufferSize = audioCtx.sampleRate * 0.03; // 30ms
+    const now = audioCtx.currentTime;
+
+    const master = audioCtx.createGain();
+    master.gain.setValueAtTime(0.0001, now);
+    master.connect(audioCtx.destination);
+    master.gain.linearRampToValueAtTime(0.06, now + 0.003);
+    master.gain.exponentialRampToValueAtTime(0.0001, now + 0.08);
+
+    // short bright sine transient
+    const sine = audioCtx.createOscillator();
+    sine.type = 'sine';
+    sine.frequency.setValueAtTime(1400, now);
+    const sGain = audioCtx.createGain();
+    sGain.gain.setValueAtTime(0.0001, now);
+    sine.connect(sGain);
+    sGain.connect(master);
+    sGain.gain.linearRampToValueAtTime(0.055, now + 0.002);
+    sGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.05);
+
+    // filtered noise for the crunchy high-end
+    const bufferSize = Math.floor(audioCtx.sampleRate * 0.04); // 40ms
     const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
     const data = buffer.getChannelData(0);
     for (let i = 0; i < bufferSize; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / bufferSize);
-    const src = audioCtx.createBufferSource();
-    src.buffer = buffer;
-    const bp = audioCtx.createBiquadFilter();
-    bp.type = 'bandpass';
-    bp.frequency.value = 1800;
-    bp.Q.value = 1.6;
-    const gain = audioCtx.createGain();
-    gain.gain.value = 0.12;
-    src.connect(bp);
-    bp.connect(gain);
-    gain.connect(audioCtx.destination);
-    src.start();
-    src.stop(audioCtx.currentTime + 0.035);
+    const noise = audioCtx.createBufferSource();
+    noise.buffer = buffer;
+    const nf = audioCtx.createBiquadFilter();
+    nf.type = 'bandpass';
+    nf.frequency.value = 2600;
+    nf.Q.value = 0.8;
+    const nGain = audioCtx.createGain();
+    nGain.gain.setValueAtTime(0.0001, now);
+    noise.connect(nf);
+    nf.connect(nGain);
+    nGain.connect(master);
+    nGain.gain.linearRampToValueAtTime(0.03, now + 0.002);
+    nGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.06);
+
+    sine.start(now);
+    sine.stop(now + 0.06);
+    noise.start(now);
+    noise.stop(now + 0.06);
   } catch (e) {}
 }
 
