@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="background-glow"></div>
+    <div class="background-waves" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="hero-shapes">
+      <span class="shape shape-1"></span>
+      <span class="shape shape-2"></span>
+      <span class="shape shape-3"></span>
+      <span class="shape shape-4"></span>
+    </div>
+    <div class="bubble-orbit" aria-hidden="true">
+      <span class="bubble bubble-1"></span>
+      <span class="bubble bubble-2"></span>
+      <span class="bubble bubble-3"></span>
+      <span class="bubble bubble-4"></span>
+      <span class="bubble bubble-5"></span>
+      <span class="bubble bubble-6"></span>
+    </div>
+    <header class="topbar glass-card">
+      <div class="brand">Somisha Adak</div>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      <span class="toggle-knob"></span>
+    </button>
+
+    <main>
+      <section id="hero" class="section hero-section">
+        <div class="hero-copy glass-card reveal">
+          <span class="eyebrow">Final-year IT student</span>
+          <h1>Hi, I’m <span>Somisha Adak</span> — crafting polished full-stack product experiences for fintech and big-tech internships.</h1>
+          <p>Final-year B.Tech IT student at Usha Mittal Institute of Technology, Mumbai. I build glassy web experiences and modern tools designed for fintech/big-tech teams pursuing smooth, memorable product launches.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">Explore projects</a>
+            <button class="button secondary" id="surpriseBtn">Surprise me</button>
+          </div>
+        </div>
+        <div class="hero-panel glass-card reveal">
+          <div class="profile-photo">
+              <img src="profile.jpg" alt="Somisha Adak" />
+            </div>
+          <div class="panel-header">
+            <div>
+              <span>About</span>
+              <strong>Somisha Adak — final-year B.Tech IT</strong>
+            </div>
+          </div>
+          <div class="panel-content">
+            <p>I’m Somisha Adak, a final-year B.Tech IT student based in Mumbai. I teach Kathak at Ekdant Kalakshetra, build web apps and prototypes, and do freelance development work.</p>
+            <div class="status-pill">Location: Mumbai, India</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal-section swirl-1">
+        <div class="section-header">
+          <span class="eyebrow">Projects</span>
+          <h2>Creative work with playful detail</h2>
+        </div>
+        <div class="cards-grid">
+          <article class="project-card glass-card hoverable" data-title="CivicSeva" data-desc="AI-powered grievance resolution platform with role-based behavior for citizen, officer, and admin flows.">
+            <div class="card-icon">✧</div>
+            <h3>CivicSeva</h3>
+            <p>AI-powered grievance resolution system built with React, Tailwind, Node.js, Express, Firebase, and Gemini API.</p>
+            <div class="project-card-actions">
+              <a class="button icon-button github-button" href="https://github.com/SomishaAdak" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0.297C5.37 0.297 0 5.667 0 12.297c0 5.293 3.438 9.781 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.304-5.467-1.332-5.467-5.93 0-1.31.47-2.38 1.235-3.22-.124-.304-.535-1.526.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3.004-.404c1.02.005 2.045.138 3.004.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.65.242 2.872.118 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.624-5.48 5.92.43.372.815 1.102.815 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.216.694.825.576C20.565 22.075 24 17.586 24 12.297 24 5.667 18.627.297 12 .297z"/></svg>
+                GitHub code
+              </a>
+              <a class="button icon-button live-button" href="https://somisha-adak.github.io" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.293 6.293a1 1 0 0 1 1.414 0L20.414 12l-5.707 5.707a1 1 0 0 1-1.414-1.414L16.586 13H4a1 1 0 1 1 0-2h12.586l-3.293-3.293a1 1 0 0 1 0-1.414z"/></svg>
+                Live demo
+              </a>
+            </div>
+            <button class="card-toggle">More</button>
+          </article>
+          <article class="project-card glass-card hoverable" data-title="Moodify" data-desc="Full-stack mood-based music recommender with 92% classification accuracy and optimized REST APIs.">
+            <div class="card-icon">⚡</div>
+            <h3>Moodify</h3>
+            <p>Sentiment-driven music recommender built with MERN and tuned for performance at scale.</p>
+            <div class="project-card-actions">
+              <a class="button icon-button github-button" href="https://github.com/SomishaAdak" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0.297C5.37 0.297 0 5.667 0 12.297c0 5.293 3.438 9.781 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.304-5.467-1.332-5.467-5.93 0-1.31.47-2.38 1.235-3.22-.124-.304-.535-1.526.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3.004-.404c1.02.005 2.045.138 3.004.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.65.242 2.872.118 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.624-5.48 5.92.43.372.815 1.102.815 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.216.694.825.576C20.565 22.075 24 17.586 24 12.297 24 5.667 18.627.297 12 .297z"/></svg>
+                GitHub code
+              </a>
+              <a class="button icon-button live-button" href="https://somisha-adak.github.io" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.293 6.293a1 1 0 0 1 1.414 0L20.414 12l-5.707 5.707a1 1 0 0 1-1.414-1.414L16.586 13H4a1 1 0 1 1 0-2h12.586l-3.293-3.293a1 1 0 0 1 0-1.414z"/></svg>
+                Live demo
+              </a>
+            </div>
+            <button class="card-toggle">More</button>
+          </article>
+          <article class="project-card glass-card hoverable" data-title="DBT Buddy" data-desc="Aadhaar-DBT awareness platform with analytics dashboards, verification workflows, and multi-role access.">
+            <div class="card-icon">✦</div>
+            <h3>DBT Buddy</h3>
+            <p>Scholarship monitoring platform built with React, Node.js, Express, and PostgreSQL.</p>
+            <div class="project-card-actions">
+              <a class="button icon-button github-button" href="https://github.com/SomishaAdak" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0.297C5.37 0.297 0 5.667 0 12.297c0 5.293 3.438 9.781 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.605-2.665-.304-5.467-1.332-5.467-5.93 0-1.31.47-2.38 1.235-3.22-.124-.304-.535-1.526.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 0 1 3.004-.404c1.02.005 2.045.138 3.004.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.65.242 2.872.118 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.624-5.48 5.92.43.372.815 1.102.815 2.222 0 1.606-.015 2.898-.015 3.293 0 .319.216.694.825.576C20.565 22.075 24 17.586 24 12.297 24 5.667 18.627.297 12 .297z"/></svg>
+                GitHub code
+              </a>
+              <a class="button icon-button live-button" href="https://somisha-adak.github.io" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.293 6.293a1 1 0 0 1 1.414 0L20.414 12l-5.707 5.707a1 1 0 0 1-1.414-1.414L16.586 13H4a1 1 0 1 1 0-2h12.586l-3.293-3.293a1 1 0 0 1 0-1.414z"/></svg>
+                Live demo
+              </a>
+            </div>
+            <button class="card-toggle">More</button>
+          </article>
+        </div>
+      </section>
+
+        <section id="resume" class="section reveal-section swirl-5 assembled">
+          <div class="section-header">
+            <span class="eyebrow">Resume</span>
+            <h2>Full view & download</h2>
+          </div>
+          <div class="glass-card resume-card reveal">
+            <p>You can view or download my resume below. (Replace resume.pdf in the project root with your PDF.)</p>
+            <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap;align-items:center;">
+              <a class="button primary" href="resume.pdf" target="_blank" rel="noreferrer">Open in new tab</a>
+              <a class="button secondary" href="resume.pdf" download>Download PDF</a>
+            </div>
+            <div class="resume-frame-wrap">
+              <iframe id="resumeFrame" src="resume.pdf" title="Resume" frameborder="0"></iframe>
+              <div class="resume-fallback">If the preview is empty, place <strong>resume.pdf</strong> in the project root or click Download.</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="connect" class="section reveal-section swirl-6">
+          <div class="section-header">
+            <span class="eyebrow">Let's connect</span>
+            <h2>Reach out and collaborate</h2>
+          </div>
+          <div class="glass-card reveal">
+            <p>I'm open to internships, freelance projects, and collaborations. Drop a message or find me on social platforms below.</p>
+            <div class="footer-links" style="margin-top:16px;justify-content:center;">
+              <a href="mailto:somisha.adak@gmail.com">Email</a>
+              <a href="https://linkedin.com/in/somisha-adak" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/SomishaAdak" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </section>
+
+      <section id="about" class="section reveal-section swirl-2">
+        <div class="content-grid">
+          <div class="glass-card about-card reveal">
+            <span class="eyebrow">About me</span>
+            <h2>Final-year B.Tech IT student with a polished full-stack edge.</h2>
+            <p>I’m Somisha Adak, building software experiences for fintech and big-tech internship roles. I study IT at Usha Mittal Institute of Technology, SNDT Women’s University, and I combine technical execution with product-minded thinking for polished, high-impact work.</p>
+            <ul>
+              <li>Usha Mittal Institute of Technology, SNDT University — B.Tech IT, CGPA 9.30</li>
+              <li>Minor in Management Essentials — CGPA 8.80</li>
+              <li>Focused on internships with fintech and big-tech product teams</li>
+            </ul>
+          </div>
+          <div class="glass-card stats-card reveal">
+            <div class="stat">
+              <strong>9.3</strong>
+              <span>CGPA</span>
+            </div>
+            <div class="stat">
+              <strong>2</strong>
+              <span>merged PRs at MetaBrainz</span>
+            </div>
+            <div class="stat">
+              <strong>60%</strong>
+              <span>effort reduced in CivicSeva workflow</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section reveal-section swirl-3">
+        <div class="section-header">
+          <span class="eyebrow">Skills</span>
+          <h2>Tools and strengths I love to use</h2>
+        </div>
+          <div class="skills-grid glass-card reveal">
+          <div class="skill-pill">JavaScript / HTML5 / CSS3</div>
+          <div class="skill-pill">React / Node.js / Express.js</div>
+          <div class="skill-pill">REST APIs / Firebase Firestore</div>
+          <div class="skill-pill">Java, Python, MongoDB</div>
+          <div class="skill-pill">PostgreSQL / SQLite</div>
+          <div class="skill-pill">Git, Docker, Postman</div>
+        </div>
+        <div class="skills-marquee reveal">
+          <div class="marquee-track">
+            <span>React · Node.js · TypeScript · Fintech · Cloud · AWS · SQL · Data · Automation · Performance · UX · Product ·</span>
+            <span>React · Node.js · TypeScript · Fintech · Cloud · AWS · SQL · Data · Automation · Performance · UX · Product ·</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="hobbies" class="section reveal-section swirl-4">
+        <div class="section-header">
+          <span class="eyebrow">Hobbies</span>
+          <h2>What keeps my creativity flowing</h2>
+        </div>
+        <div class="hobbies-grid">
+          <div class="hobby-card glass-card hoverable reveal">
+            <h3>Classical dance</h3>
+            <p>At Ekdant Kalakshetra, I teach Kathak and help beginners discover rhythm, storytelling, and graceful movement.</p>
+          </div>
+          <div class="hobby-card glass-card hoverable reveal">
+            <h3>Building things</h3>
+            <p>I love building polished apps, prototypes, automations, and product tools that feel smooth, useful, and memorable.</p>
+          </div>
+          <div class="hobby-card glass-card hoverable reveal">
+            <h3>Freelance work</h3>
+            <p>Freelancing on creative web builds and launch-ready development lets me turn ideas into real client experiences.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer glass-card reveal">
+      <p>Ready to turn your story into a polished modern experience? Let’s connect for SWE/full-stack internship opportunities.</p>
+      <div class="footer-links">
+        <a href="#hero">Back to top</a>
+        <a href="mailto:somisha.adak@gmail.com">somisha.adak@gmail.com</a>
+        <a href="https://linkedin.com/in/somisha-adak" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/SomishaAdak" target="_blank" rel="noreferrer">GitHub</a>
+        <span>Location: Mumbai, India</span>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

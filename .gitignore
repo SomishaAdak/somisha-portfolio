@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+dist/
+.env
+.vscode/
+*.log
+resume.pdf
+# OS files
+Thumbs.db
+desktop.ini
