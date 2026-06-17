@@ -24,7 +24,3 @@ python -m http.server 8000
 
 - Add `resume.pdf` to the project root to enable the inline resume preview.
 - Theme preference is stored in `localStorage` and persists across reloads.
-
-## License
-
-MIT
